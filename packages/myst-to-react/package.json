@@ -22,8 +22,10 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@myst-theme/providers": "^0.13.4",
-    "@scienceicons/react": "^0.0.11",
     "@radix-ui/react-hover-card": "^1.0.6",
+    "@scienceicons/react": "^0.0.11",
+    "@shikijs/colorized-brackets": "^1.23.1",
+    "@shikijs/transformers": "^1.23.1",
     "buffer": "^6.0.3",
     "classnames": "^2.3.2",
     "myst-common": "^1.7.3",
@@ -31,6 +33,7 @@
     "myst-spec": "^0.0.5",
     "nanoid": "^4.0.2",
     "react-syntax-highlighter": "15.5.0",
+    "shiki": "^1.23.1",
     "swr": "^2.1.5",
     "unist-util-select": "^4.0.3",
     "unist-util-visit": "^4.1.2"

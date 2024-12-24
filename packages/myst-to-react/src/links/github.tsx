@@ -6,7 +6,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { HoverPopover, LinkCard } from '../components/index.js';
 import React, { useEffect, useState } from 'react';
-import { CodeBlock } from '../code.js';
+import { CodeBlock } from '../shiki-code.js';
 import classNames from 'classnames';
 
 const fetcher = (...args: Parameters<typeof fetch>) =>

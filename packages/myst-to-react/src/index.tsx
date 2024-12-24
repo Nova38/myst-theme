@@ -23,7 +23,8 @@ import ASIDE_RENDERERS from './aside.js';
 import UNKNOWN_MYST_RENDERERS from './unknown.js';
 
 export { CopyIcon, HoverPopover, Tooltip, LinkCard } from './components/index.js';
-export { CodeBlock } from './code.js';
+export { CodeBlock as OldCodeBlock } from './code.js';
+export { CodeBlock } from './shiki-code.js';
 export { HashLink, scrollToElement } from './hashLink.js';
 export { Admonition, AdmonitionKind } from './admonitions.js';
 export { Details } from './dropdown.js';

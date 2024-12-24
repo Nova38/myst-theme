@@ -1,4 +1,7 @@
 import '../public/tailwind.css';
+import { ShikiProvider } from '@myst-theme/providers';
+
+import './code.css';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

@@ -1,10 +1,18 @@
 import React from 'react';
 
 import { CodeBlock } from 'myst-to-react';
+import { ShikiProvider } from '@myst-theme/providers';
 
 export default {
   title: 'Components/CodeBlock',
   component: CodeBlock,
+  decorators: [
+    (Story) => (
+      <ShikiProvider>
+        <Story />
+      </ShikiProvider>
+    ),
+  ],
 };
 
 type Props = {

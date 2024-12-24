@@ -11,6 +11,8 @@ import {
   ContentReload,
   SkipTo,
 } from '@myst-theme/site';
+import { ShikiProvider } from '@myst-theme/providers';
+
 export { AppErrorBoundary as ErrorBoundary } from '@myst-theme/site';
 import { createSearch as createMiniSearch } from '@myst-theme/search-minisearch';
 import { Outlet, useLoaderData } from '@remix-run/react';
@@ -84,21 +86,23 @@ export default function AppWithReload() {
 
   return (
     <SearchFactoryProvider factory={searchFactory}>
-      <Document
-        theme={theme}
-        config={config}
-        scripts={MODE === 'static' ? undefined : <ContentReload port={CONTENT_CDN_PORT} />}
-        staticBuild={MODE === 'static'}
-        baseurl={BASE_URL}
-      >
-        <SkipTo
-          targets={[
-            { id: 'skip-to-frontmatter', title: 'Skip to article frontmatter' },
-            { id: 'skip-to-article', title: 'Skip to article content' },
-          ]}
-        />
-        <Outlet />
-      </Document>
+      <ShikiProvider>
+        <Document
+          theme={theme}
+          config={config}
+          scripts={MODE === 'static' ? undefined : <ContentReload port={CONTENT_CDN_PORT} />}
+          staticBuild={MODE === 'static'}
+          baseurl={BASE_URL}
+        >
+          <SkipTo
+            targets={[
+              { id: 'skip-to-frontmatter', title: 'Skip to article frontmatter' },
+              { id: 'skip-to-article', title: 'Skip to article content' },
+            ]}
+          />
+          <Outlet />
+        </Document>
+      </ShikiProvider>
     </SearchFactoryProvider>
   );
 }
